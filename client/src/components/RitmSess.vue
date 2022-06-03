@@ -46,6 +46,19 @@ export default {
   gap: 25px;
   margin-top: 100px;
   width: 100%;
+
+  @media (max-width: 1230px) {
+    max-width: 800px;
+    margin: 100px auto 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 260px);
+  }
+
+  @media (max-width: 830px) {
+    justify-content: center;
+    grid-template-columns: repeat(1, 90%);
+    grid-template-rows: repeat(5, 1fr);
+  }
 }
 
 .session_card {
@@ -61,6 +74,18 @@ export default {
   background-size: auto 100%;
   border-radius: 10px;
 
+  @media (max-width: 830px) {
+    height: 500px;
+  }
+
+  @media (max-width: 600px) {
+    height: 400px;
+  }
+
+  @media (max-width: 500px) {
+    height: 300px;
+  }
+
   & > p {
     font-size: 24px;
     font-family: sans;
@@ -68,32 +93,34 @@ export default {
   }
 }
 
-.card-1 {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 3;
+@media (min-width: 1231px) {
+  .card-1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
 
-  background-position: 40% center;
-}
+    background-position: 40% center;
+  }
 
-.card-2 {
-  grid-column: 2;
-  grid-row: 1;
-}
+  .card-2 {
+    grid-column: 2;
+    grid-row: 1;
+  }
 
-.card-3 {
-  grid-column: 3;
-  grid-row: 1;
-}
+  .card-3 {
+    grid-column: 3;
+    grid-row: 1;
+  }
 
-.card-4 {
-  grid-column: 2;
-  grid-row: 2;
-}
+  .card-4 {
+    grid-column: 2;
+    grid-row: 2;
+  }
 
-.card-5 {
-  grid-column: 3;
-  grid-row: 2;
+  .card-5 {
+    grid-column: 3;
+    grid-row: 2;
+  }
 }
 </style>

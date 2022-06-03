@@ -77,15 +77,16 @@ export default {
   h4 {
     margin: 0 0 40px;
     text-align: start;
+    font-size: 30px;
   }
 
   p {
     margin: 10px 0;
     text-align: start;
+    font-size: 18px;
   }
 }
 
 .card {
-  height: 100%;
 }
 </style>

@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <NavigationBar />
+    <!--    <NavigationBar /> -->
     <router-view />
     <FooterBar />
   </div>
 </template>
 
 <script>
-import NavigationBar from "./components/Navbar.vue";
+//import NavigationBar from "./components/Navbar.vue";
 import FooterBar from "./components/FooterBar.vue";
 
 export default {
   name: "App",
   title: "main",
   components: {
-    NavigationBar,
+    //    NavigationBar,
     FooterBar,
   },
   data() {
@@ -32,8 +32,11 @@ $accent: #018abe;
   -moz-osx-font-smoothing: grayscale;
   color: white;
 
-  max-width: 1200px;
   width: 100%;
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
 
   margin: 0 auto;
 }
@@ -52,6 +55,7 @@ body {
 
   &::-webkit-scrollbar {
     width: 6px;
+    height: 8px;
   }
 
   &::-webkit-scrollbar-thumb {
