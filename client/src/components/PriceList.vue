@@ -10,10 +10,10 @@
           <li v-for="(product, id) in products" :key="id">{{ product.price }}р.</li>
         </ul>
       </div>
-      <button class="card">
+      <div class="card">
         <img src="../../public/coupon.png" alt="coupon" />
         <p>Подарочный сертификат</p>
-      </button>
+      </div>
     </div>
   </div>
 </template>
@@ -46,6 +46,10 @@ export default {
   align-items: center;
   justify-content: space-between;
   margin-top: 100px;
+
+  @media (max-width: 950px) {
+    flex-direction: column;
+  }
 }
 
 .list {
@@ -83,6 +87,9 @@ export default {
       list-style-type: none;
     }
   }
+  @media (max-width: 950px) {
+    gap: 20px;
+  }
 }
 
 .card {
@@ -95,7 +102,6 @@ export default {
 
   & > img {
     width: 100%;
-    max-width: 530px;
     height: auto;
 
     border-radius: 10px;
@@ -104,6 +110,13 @@ export default {
   & > p {
     font-size: 21px;
     text-align: center;
+  }
+
+  @media (max-width: 950px) {
+    & > img {
+      width: 0px;
+      height: 0px;
+    }
   }
 }
 </style>
