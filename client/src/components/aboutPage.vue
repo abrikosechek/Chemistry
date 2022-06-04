@@ -66,6 +66,33 @@ export default {
   & > * {
     width: 50%;
   }
+
+  @media (max-width: 1130px) {
+    justify-content: center;
+    margin: 40px 0 0;
+
+    & > .text {
+      width: 80%;
+
+      & > h4 {
+        margin: 0 0 10px;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      & > p {
+        margin: 0px 0;
+        text-align: start;
+        font-size: 18px;
+      }
+    }
+
+    & > .card {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+  }
 }
 
 .text {
@@ -85,5 +112,11 @@ export default {
     text-align: start;
     font-size: 18px;
   }
+}
+
+.card {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
 }
 </style>

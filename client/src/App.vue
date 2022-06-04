@@ -7,17 +7,20 @@
 </template>
 
 <script>
+import NavigationBar from "./components/Navbar.vue";
 import FooterBar from "./components/FooterBar.vue";
 
 export default {
   name: "App",
   title: "main",
   components: {
+    NavigationBar,
     FooterBar,
   },
   data() {
     return {};
   },
+  created() {},
 };
 </script>
 
@@ -58,7 +61,9 @@ body {
 
   &::-webkit-scrollbar-thumb {
     background-color: $accent;
-    border-radius: 2px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: rgb(204, 204, 204);
   }
 }
 

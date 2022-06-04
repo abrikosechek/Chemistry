@@ -36,5 +36,20 @@ export default {
   background-size: auto 100%;
   background-position: center;
   border-radius: 14px;
+
+  @media (max-width: 1200px) {
+    border-radius: 0;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    height: 500px;
+  }
+
+  @media (max-width: 800px) {
+    border-radius: 0;
+    width: 100%;
+    height: 400px;
+  }
 }
 </style>

@@ -14,6 +14,16 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 90px 0 20px;
+  margin-top: 70px;
+  padding: 20px 0 20px;
+
+  @media (max-width: 1200px) {
+    background-color: #233f4d;
+    padding: 20px 20px 10px;
+  }
+
+  @media (max-width: 860px) {
+    padding: 10px 10% 10px;
+  }
 }
 </style>

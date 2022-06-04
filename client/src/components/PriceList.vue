@@ -12,7 +12,7 @@
       </div>
       <div class="card">
         <img src="../../public/coupon.png" alt="coupon" />
-        <p>Подарочный сертификат</p>
+        <router-link to="/">Подарочный сертификат</router-link>
       </div>
     </div>
   </div>
@@ -48,6 +48,7 @@ export default {
   margin-top: 100px;
 
   @media (max-width: 950px) {
+    margin-top: 20px;
     flex-direction: column;
   }
 }
@@ -77,6 +78,21 @@ export default {
         border-radius: 0 50px;
       }
     }
+    @media (max-width: 400px) {
+      li:before {
+        content: "";
+
+        position: relative;
+        float: none;
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+
+        background-color: white;
+        border-radius: 0 0;
+      }
+    }
   }
 
   .prices {
@@ -87,8 +103,13 @@ export default {
       list-style-type: none;
     }
   }
+
   @media (max-width: 950px) {
     gap: 20px;
+  }
+
+  @media (max-width: 400px) {
+    gap: 0;
   }
 }
 
@@ -107,9 +128,10 @@ export default {
     border-radius: 10px;
   }
 
-  & > p {
+  & > a {
     font-size: 21px;
     text-align: center;
+    text-decoration: underline;
   }
 
   @media (max-width: 950px) {

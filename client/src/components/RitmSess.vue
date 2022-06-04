@@ -37,6 +37,14 @@ export default {
 <style lang="scss">
 .sessions {
   margin-top: 150px;
+
+  @media (max-width: 1230px) {
+    margin-top: 80px;
+  }
+
+  @media (max-width: 800px) {
+    margin-top: 40px;
+  }
 }
 
 .session_cards {
@@ -49,12 +57,25 @@ export default {
 
   @media (max-width: 1230px) {
     max-width: 800px;
-    margin: 100px auto 0;
+    margin: 60px auto 0;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 260px);
   }
 
   @media (max-width: 830px) {
+    justify-content: center;
+    margin: 30px auto 0;
+    grid-template-columns: repeat(2, 40%);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  @media (max-width: 740px) {
+    justify-content: center;
+    grid-template-columns: repeat(1, 60%);
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  @media (max-width: 490px) {
     justify-content: center;
     grid-template-columns: repeat(1, 90%);
     grid-template-rows: repeat(5, 1fr);
@@ -75,15 +96,11 @@ export default {
   border-radius: 10px;
 
   @media (max-width: 830px) {
-    height: 500px;
-  }
+    background-position: center;
+    background-size: 100% auto;
+    border-radius: 10px;
 
-  @media (max-width: 600px) {
-    height: 400px;
-  }
-
-  @media (max-width: 500px) {
-    height: 300px;
+    height: 180px;
   }
 
   & > p {
